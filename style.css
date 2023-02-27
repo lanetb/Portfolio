@@ -292,7 +292,45 @@ i{
     flex-basis: 7%;
     border-radius:25px;
     border: #000000 5px solid;
+    display: flex;
+    justify-content: space-between;
+}
 
+.bio .top button{
+    background: #1e1e1e;
+    height: 50px;
+    width: 200px;
+    margin-bottom: -5px;
+    border: none;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    z-index: 1;
+    border-bottom: #000000 5px solid;
+}
+
+.bio .top .aboutme{
+    border-bottom-right-radius: 0;
+    
+}
+
+.bio .top .work{
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.bio .top .school{
+    border-bottom-left-radius: 0;
+}
+
+.bio .top .active{
+    border-bottom: #1e1e1e 5px solid;
+    border-right: #000 3px solid;
+    border-left: #000 3px solid;
+    border-top: #000 2px solid;
+    
 }
 
 .bio .bottom{
