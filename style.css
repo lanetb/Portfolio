@@ -271,7 +271,22 @@ i{
     background: #000000;
     flex-basis: 30%;
     margin-top: 50px;
-    border: #fff 5px solid;
+    border: #fff 3px solid;
+    box-shadow: #252525 5px 5px 5px 5px;
+}
+
+.photo img{
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+    border: #000000 5px solid;
+    object-fit: cover;
+    filter: grayscale(50%);
+    transition: all 1s ease;
+}
+
+.photo img:hover{
+    filter: grayscale(0%);
 }
 
 .bio{
@@ -284,6 +299,7 @@ i{
     background-color: black;
     flex-direction: column;
     flex-basis: 65%;
+    box-shadow: #252525 5px 5px 5px 5px;
 }
 
 .bio .top{
@@ -311,9 +327,8 @@ i{
     border-bottom: #000000 5px solid;
 }
 
-.bio .top .aboutme{
+.bio .top .aboutMe{
     border-bottom-right-radius: 0;
-    
 }
 
 .bio .top .work{
@@ -327,10 +342,11 @@ i{
 
 .bio .top .active{
     border-bottom: #1e1e1e 5px solid;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
     border-right: #000 3px solid;
     border-left: #000 3px solid;
     border-top: #000 2px solid;
-    
 }
 
 .bio .bottom{

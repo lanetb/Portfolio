@@ -24,3 +24,7 @@ toggle.addEventListener('click', function() {
     const isOpen = dropDown.classList.contains('open');
     toggleIcon.classList = isOpen ? 'fas fa-xmark' : 'fas fa-bars';
 });
+
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+}
