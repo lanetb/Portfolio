@@ -7,6 +7,7 @@ const workText = document.querySelector('.workText');
 const school = document.querySelector('.school');
 const schoolHead = document.querySelector('.schoolHead');
 const schoolText = document.querySelector('.schoolText');
+const bottom = document.querySelector('.bottom');
 
 aboutMe.addEventListener('click', function() {
     aboutMe.classList.add('active');
@@ -18,6 +19,8 @@ aboutMe.addEventListener('click', function() {
     workText.classList.add('hidden');
     schoolHead.classList.add('hidden');
     schoolText.classList.add('hidden');
+    bottom.classList.add('left');
+    bottom.classList.remove('right');
 });
 
 work.addEventListener('click', function() {
@@ -30,6 +33,9 @@ work.addEventListener('click', function() {
     workText.classList.remove('hidden');
     schoolHead.classList.add('hidden');
     schoolText.classList.add('hidden');
+    bottom.classList.remove('left');
+    bottom.classList.remove('right');
+
 });
 
 school.addEventListener('click', function() {
@@ -42,4 +48,6 @@ school.addEventListener('click', function() {
     workText.classList.add('hidden');
     schoolHead.classList.remove('hidden');
     schoolText.classList.remove('hidden');
+    bottom.classList.add('right');
+    bottom.classList.remove('left');
 });

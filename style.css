@@ -281,7 +281,7 @@ i{
     border-radius: 30px;
     border: #000000 5px solid;
     object-fit: cover;
-    filter: grayscale(50%);
+    filter: grayscale(65%);
     transition: all 1s ease;
 }
 
@@ -300,6 +300,7 @@ i{
     flex-direction: column;
     flex-basis: 65%;
     box-shadow: #252525 5px 5px 5px 5px;
+    overflow: hidden;
 }
 
 .bio .top{
@@ -347,6 +348,11 @@ i{
     border-right: #000 3px solid;
     border-left: #000 3px solid;
     border-top: #000 2px solid;
+}
+
+.left{
+    border-top-left-radius: 0;
+
 }
 
 .bio .bottom{
