@@ -19,7 +19,7 @@ body{
     left: 0;
     width: 100%;
     height: 100vh;
-    background: radial-gradient(circle, #060606, #000000);
+    background: #000000;
     z-index: -1;
 }
 /*-------------------svg path-------------------*/
@@ -37,19 +37,20 @@ body{
     height: 100px;
     margin-left: 100px;
     left: 0;
-    z-index: -1;
+    z-index: 2;
 }
 
 .hidden {
     display: none;
 }
+
 svg{
     width: 100%;
     height: 100vh;
     position: absolute;
     top: 0;
     width: 1000px;
-    z-index: -1;
+    z-index: 1;
 }
 
 .cls-1,
@@ -109,9 +110,13 @@ svg{
     white-space: nowrap;
     width: 0;
     color: #fff;
-    z-index: 1;
+    z-index: 2;
     animation: typing 1.5s steps(35, end) forwards 5s;
     font-family: 'Teko', sans-serif;
+    text-shadow: -1px 1px 0 #000,
+				  1px 1px 0 #000,
+				  1px -1px 0 #000,
+                 -1px 1px 0 #000;
 }
 
 @keyframes typing {
@@ -139,10 +144,12 @@ nav {
     width: 100%;
     transition: all 1s ease;
     font-size: 26px;
+    z-index: 2;
 }
 
 header{
     position: fixed;
+    z-index: 2;
 }
 
 .nav-scroll{
@@ -199,6 +206,120 @@ i{
 }
 
 
+/*-------------------dividebar-------------------*/
+
+.dividebar
+{
+    height:5px;
+    width:100%;
+    background: linear-gradient(130deg, #000000, #fff, #000000);
+    background-size: 200% 200%;
+    z-index: 0;
+    position: absolute;
+
+    -webkit-animation: Animation 5s ease infinite;
+    -moz-animation: Animation 5s ease infinite;
+    animation: Animation 5s ease infinite;
+}
+
+@-webkit-keyframes Animation {
+    0%{background-position:10% 0%}
+    50%{background-position:91% 100%}
+    100%{background-position:10% 0%}
+}
+@-moz-keyframes Animation {
+    0%{background-position:10% 0%}
+    50%{background-position:91% 100%}
+    100%{background-position:10% 0%}
+}
+@keyframes Animation { 
+    0%{background-position:10% 0%}
+    50%{background-position:91% 100%}
+    100%{background-position:10% 0%}
+}
+
+/*----------------bio-------------------*/
+
+.bioSection{
+    background: #101010;
+    padding: 100px 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sectionDiv{
+    width: 100%;
+    margin-top: -33vw;
+    z-index: 0;
+    position: absolute;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 80vw;
+}
+
+.photo{
+    height: 80vh;
+    border-radius: 30px;
+    background: #000000;
+    flex-basis: 30%;
+    margin-top: 50px;
+    border: #fff 5px solid;
+}
+
+.bio{
+    display: flex;
+    position: relative;
+    border: #000000 5px solid;
+    margin-top: 50px;
+    border-radius: 30px;
+    height: 80vh;
+    background-color: black;
+    flex-direction: column;
+    flex-basis: 65%;
+}
+
+.bio .top{
+    width: 100%;
+    background: #101010;
+    flex-basis: 7%;
+    border-radius:25px;
+    border: #000000 5px solid;
+
+}
+
+.bio .bottom{
+    width: 100%;
+    background: #101010;
+    flex-basis: 95%;
+    border-radius:25px;
+
+}
+
+.bio .bottom h1{
+    color: #fff;
+    font-size: 50px;
+    margin: 10px 10px;
+    text-transform: capitalize;
+    
+}
+.bio .bottom p{
+    color: #fff;
+    font-size: 35px;
+    margin: 0px 20px;
+    font-family:'Teko', sans-serif;;
+    
+}
+
+/*---------------media-----------------*/
+
 @media screen and (max-width: 1320px){
     nav{
         padding: 20px 50px;
@@ -233,7 +354,11 @@ i{
         margin-bottom: -100px ;
         margin-left: -10px;
     }
-    
+    .sectionDiv{
+        width: 100%;
+        margin-top: -41vw;
+        z-index: -1;
+    }
 }
 
 @media screen and (max-width: 1000px){
@@ -256,7 +381,46 @@ i{
         margin-bottom: -80px ;
         margin-left: -10px;
     }
+    .sectionDiv{
+        width: 100%;
+        margin-top: -42vw;
+        z-index: -1;
+    }
+}
 
+@media screen and (max-width: 888px){
+
+    .sectionDiv{
+        width: 100%;
+        margin-top: -43vw;
+        z-index: -1;
+    }
+}
+
+@media screen and (max-width: 814px){
+
+    .sectionDiv{
+        width: 100%;
+        margin-top: -44vw;
+        z-index: -1;
+    }
+}
+@media screen and (max-width: 750px){
+
+    .sectionDiv{
+        width: 100%;
+        margin-top: -45vw;
+        z-index: -1;
+    }
+}
+
+@media screen and (max-width: 698px){
+
+    .sectionDiv{
+        width: 100%;
+        margin-top: -46vw;
+        z-index: -1;
+    }
 }
 
 @media screen and (max-width: 576px){
@@ -269,34 +433,3 @@ i{
 @media screen and (max-width: 530px){
 
 }
-
-/*-------------------dividebar-------------------*/
-
-.dividebar
-{
-    height:5px;
-    width:100%;
-    background: linear-gradient(130deg, #000000, #ffffff, #000000);
-    background-size: 200% 200%;
-
-    -webkit-animation: Animation 5s ease infinite;
-    -moz-animation: Animation 5s ease infinite;
-    animation: Animation 5s ease infinite;
-}
-
-@-webkit-keyframes Animation {
-    0%{background-position:10% 0%}
-    50%{background-position:91% 100%}
-    100%{background-position:10% 0%}
-}
-@-moz-keyframes Animation {
-    0%{background-position:10% 0%}
-    50%{background-position:91% 100%}
-    100%{background-position:10% 0%}
-}
-@keyframes Animation { 
-    0%{background-position:10% 0%}
-    50%{background-position:91% 100%}
-    100%{background-position:10% 0%}
-}
-
