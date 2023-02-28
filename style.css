@@ -373,6 +373,34 @@ i{
     font-family:'Teko', sans-serif;;
 }
 
+.jobTitle{
+    color: #fff;
+    font-size: 30px;
+    font-family:'Teko', sans-serif;;
+}
+
+.date{
+    color: #fff;
+    font-size: 25px;
+    font-family:'Teko', sans-serif;
+}
+
+
+.br {
+    display: block;
+    margin-top: -30px;
+}
+
+.bottom ul{
+    color: #fff;
+    font-size: 25px;
+    margin: 0px 60px;
+
+}
+
+.bottom ul li{
+    font-family:'Teko', sans-serif;;
+}
 
 /*---------------media-----------------*/
 
