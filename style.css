@@ -12,6 +12,10 @@ body{
     background: #000;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /*-------------------particle-------------------*/
 #particleCanvas{
     position: absolute;
@@ -361,14 +365,14 @@ i{
 
 .bio .bottom h1{
     color: #fff;
-    font-size: 50px;
+    font-size: 5vmin;
     margin: 10px 20px;
     text-transform: capitalize;
 }
 
 .bio .bottom p{
     color: #fff;
-    font-size: 35px;
+    font-size: 3.5vmin;
     margin: 0px 20px;
     font-family:'Teko', sans-serif;;
 }
@@ -383,12 +387,12 @@ i{
     color: #fff;
     font-size: 25px;
     font-family:'Teko', sans-serif;
+    margin-left: 15px;
 }
-
 
 .br {
     display: block;
-    margin-top: -30px;
+    margin-top: -25px;
 }
 
 .bottom ul{
