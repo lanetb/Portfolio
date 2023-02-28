@@ -19,8 +19,6 @@ aboutMe.addEventListener('click', function() {
     workText.classList.add('hidden');
     schoolHead.classList.add('hidden');
     schoolText.classList.add('hidden');
-    bottom.classList.add('left');
-    bottom.classList.remove('right');
 });
 
 work.addEventListener('click', function() {
@@ -33,9 +31,6 @@ work.addEventListener('click', function() {
     workText.classList.remove('hidden');
     schoolHead.classList.add('hidden');
     schoolText.classList.add('hidden');
-    bottom.classList.remove('left');
-    bottom.classList.remove('right');
-
 });
 
 school.addEventListener('click', function() {
@@ -48,6 +43,4 @@ school.addEventListener('click', function() {
     workText.classList.add('hidden');
     schoolHead.classList.remove('hidden');
     schoolText.classList.remove('hidden');
-    bottom.classList.add('right');
-    bottom.classList.remove('left');
 });
