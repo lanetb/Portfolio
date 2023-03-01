@@ -245,7 +245,7 @@ i{
 /*----------------bio-------------------*/
 
 .bioSection{
-    background: #101010;
+    background: #000000;
     padding: 100px 0;
     width: 100%;
     height: 100vh;
@@ -266,24 +266,20 @@ i{
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    width: 80vw;
+    width: 1000px;
 }
 
 .photo{
-    height: 80vh;
-    border-radius: 30px;
+    height: 50vh;
     background: #000000;
     flex-basis: 30%;
     margin-top: 50px;
-    border: #fff 3px solid;
-    box-shadow: #252525 5px 5px 5px 5px;
+
 }
 
 .photo img{
     height: 100%;
     width: 100%;
-    border-radius: 30px;
-    border: #000000 5px solid;
     object-fit: cover;
     filter: grayscale(65%);
     transition: all 1s ease;
@@ -295,41 +291,63 @@ i{
 
 .bio{
     display: flex;
-    position: relative;
-    border: #000000 7px solid;
-    margin-top: 50px;
+    position: abiolute;
     border-radius: 30px;
-    height: 80vh;
     background-color: black;
-    flex-direction: column;
+    flex-direction: row;
     flex-basis: 65%;
-    box-shadow: #252525 5px 5px 5px 5px;
-    overflow: hidden;
 }
 
 .bio .top{
     width: 100%;
-    background: #1e1e1e;
     flex-basis: 7%;
-    border-radius:25px;
-    border: #000000 5px solid;
     display: flex;
-    justify-content: space-between;
+    display: flex;
+    justify-content: top;
+    flex-direction: column;
+    
+}
+
+.biotop{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    flex-basis: 65%;
+}
+
+.headers {
+    color: #fff;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex-direction: row;
+    width: 100%;
+    font-size: 20px;
+}
+
+
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
 }
 
 .bio .top button{
-    background: #1e1e1e;
+    text-align: left;
+    background: #000000;
     height: 50px;
-    width: 200px;
-    margin-bottom: -5px;
+    width: 100px;
     border: none;
-    border-radius: 15px;
     color: #fff;
-    font-size: 20px;
+    font-size: 15px;
     cursor: pointer;
     transition: all 0.5s ease;
     z-index: 1;
-    border-bottom: #000000 5px solid;
 }
 
 .bio .top .aboutMe{
@@ -346,34 +364,21 @@ i{
 }
 
 .bio .top .active{
-    border-bottom: #1e1e1e 5px solid;
-    border-bottom-right-radius: 3px;
-    border-bottom-left-radius: 3px;
-    border-right: #000 3px solid;
-    border-left: #000 3px solid;
-    border-top: #000 2px solid;
+    text-decoration: underline;
 }
 
 .bio .bottom{
     width: 100%;
-    background: #1e1e1e;
     flex-basis: 95%;
     border-radius:25px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-}
-
-.bio .bottom h1{
-    color: #fff;
-    font-size: 5vmin;
-    margin: 10px 20px;
-    text-transform: capitalize;
+    
 }
 
 .bio .bottom p{
     color: #fff;
-    font-size: 3.5vmin;
-    margin: 0px 20px;
+    font-size: 25px;
     font-family:'Teko', sans-serif;;
 }
 
@@ -398,12 +403,22 @@ i{
 .bottom ul{
     color: #fff;
     font-size: 25px;
-    margin: 0px 60px;
 
 }
 
 .bottom ul li{
     font-family:'Teko', sans-serif;;
+}
+
+.aboutMeHead::after{
+    content: "";
+    display: inline-block;
+    position: relative; 
+    top: -10px;
+    width: 300px;
+    height: 2px;
+    margin-left: 30px;
+    background-color: rgb(34, 34, 34);
 }
 
 /*---------------media-----------------*/
