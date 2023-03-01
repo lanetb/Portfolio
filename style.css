@@ -157,7 +157,7 @@ header{
 }
 
 .nav-scroll{
-    background-color: #060606;
+    background-color: #101010;
     box-shadow: 0 3px 10px rgba(0, 0, 0, .15);
 }
 
@@ -281,12 +281,31 @@ i{
     height: 100%;
     width: 100%;
     object-fit: cover;
-    filter: grayscale(65%);
+    filter: grayscale(100%);
     transition: all 1s ease;
 }
 
 .photo img:hover{
     filter: grayscale(0%);
+}
+
+.photo::after{
+    border: 2px solid rgb(255, 255, 255);
+    z-index: -1;
+    content: "";
+    display: block;
+    transition: all .5s ease;
+    height: 50vh;
+    margin-top: -500px;
+    margin-left: -30px;
+    margin-right: 30px;
+}
+
+.photo:hover::after{
+    margin-top: -490px;
+    margin-right: 20px;
+    margin-left: -20px;
+
 }
 
 .bio{
@@ -314,6 +333,7 @@ i{
     align-items: center;
     flex-direction: column;
     width: 100%;
+    height: 650px;
     flex-basis: 65%;
 }
 
@@ -321,17 +341,15 @@ i{
     color: #fff;
     display: flex;
     justify-content: left;
-    align-items: left;
+    align-items: center;
     flex-direction: row;
     width: 100%;
     font-size: 20px;
 }
 
-
-
 .buttons{
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     flex-direction: column;
     width: 100%;
@@ -341,76 +359,105 @@ i{
     text-align: left;
     background: #000000;
     height: 50px;
-    width: 100px;
+    width: 130px;
     border: none;
-    color: #fff;
+    color: #b6b6b6;
     font-size: 15px;
     cursor: pointer;
     transition: all 0.5s ease;
     z-index: 1;
 }
 
-.bio .top .aboutMe{
-    border-bottom-right-radius: 0;
-}
-
-.bio .top .work{
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-}
-
-.bio .top .school{
-    border-bottom-left-radius: 0;
-}
-
 .bio .top .active{
-    text-decoration: underline;
+    color: #fff;
 }
 
-.bio .bottom{
-    width: 100%;
-    flex-basis: 95%;
-    border-radius:25px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+.bio .top .active::after{
+    display: block;
+    content: "";
+    width: 0;
+    height: 4px;
+    background: #fff;
+    border-radius: 2px;
+    animation: underline 1s ease forwards;
+}
+
+.bio .top .work::after{
+    animation: underline2 1s ease forwards;
+}
+
+.bio .top .aboutMe::after{
+    animation: underline3 1s ease forwards;
+}
+
+@keyframes underline{
+    0%{
+        width: 0vw;
+    }
+    100%{
+        width: 35px;
+    }
+}
+
+@keyframes underline2{
+    0%{
+        width: 0vw;
+    }
+    100%{
+        width: 80px;
+    }
+}
+
+@keyframes underline3{
+    0%{
+        width: 0vw;
+    }
+    100%{
+        width: 50px;
+    }
+}
     
+.bio .bottom{
+    width: 520px;
+    flex-basis: 95%;
+    color: #c1c1c1;
 }
 
 .bio .bottom p{
-    color: #fff;
+
     font-size: 25px;
     font-family:'Teko', sans-serif;;
 }
 
 .jobTitle{
-    color: #fff;
-    font-size: 30px;
+    color: #dcdcdc;
+    font-size: 22px;
     font-family:'Teko', sans-serif;;
 }
 
 .date{
-    color: #fff;
-    font-size: 25px;
+    font-size: 20px;
     font-family:'Teko', sans-serif;
     margin-left: 15px;
 }
 
 .br {
     display: block;
-    margin-top: -25px;
+    margin-top: -15px;
 }
 
 .bottom ul{
-    color: #fff;
-    font-size: 25px;
-
+    font-size: 20px;
 }
 
 .bottom ul li{
+    
     font-family:'Teko', sans-serif;;
+    list-style-type: circle; 
+    margin-left: 35px;
 }
 
-.aboutMeHead::after{
+.aboutMeHead::after, .workHead::after, .schoolHead::after{
     content: "";
     display: inline-block;
     position: relative; 
@@ -419,6 +466,14 @@ i{
     height: 2px;
     margin-left: 30px;
     background-color: rgb(34, 34, 34);
+}
+
+.workHead::after{
+    width: 180px;
+}
+
+.schoolHead::after{
+    width: 370px;
 }
 
 /*---------------media-----------------*/
