@@ -3,7 +3,7 @@ const ctx = canvas.getContext('2d');
 ctx.canvas.width = window.innerWidth;
 ctx.canvas.height = window.innerHeight;
 
-const fps = 60;
+const fps = 30;
 
 // Particles
 let particleArray;
