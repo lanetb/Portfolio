@@ -5,6 +5,8 @@ const work = document.querySelector('.work');
 const workHead = document.querySelector('.workHead');
 const workText = document.querySelector('.workText');
 const workText1 = document.querySelector('.workText1');
+const workText2 = document.querySelector('.workText2');
+const workText3 = document.querySelector('.workText3');
 const school = document.querySelector('.school');
 const schoolHead = document.querySelector('.schoolHead');
 const schoolText = document.querySelector('.schoolText');
@@ -21,6 +23,8 @@ aboutMe.addEventListener('click', function() {
     schoolHead.classList.add('hidden');
     schoolText.classList.add('hidden');
     workText1.classList.add('hidden');
+    workText2.classList.add('hidden');
+    workText3.classList.add('hidden');
 });
 
 work.addEventListener('click', function() {
@@ -34,6 +38,8 @@ work.addEventListener('click', function() {
     schoolHead.classList.add('hidden');
     schoolText.classList.add('hidden');
     workText1.classList.remove('hidden');
+    workText2.classList.remove('hidden');
+    workText3.classList.remove('hidden');
 });
 
 school.addEventListener('click', function() {
@@ -47,4 +53,6 @@ school.addEventListener('click', function() {
     schoolHead.classList.remove('hidden');
     schoolText.classList.remove('hidden');
     workText1.classList.add('hidden');
+    workText2.classList.add('hidden');
+    workText3.classList.add('hidden');
 });
