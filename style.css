@@ -478,22 +478,25 @@ i{
     width: 100%;
     height: 500px;
     display: flex;
-    justify-content: center;
     color: #fff;
     flex-direction: column;
+    align-items: center;
 }
 
 .currentProjects{
+    width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    margin-top: ;
 }
 
 .currProjOne{
     width: 200px;
     height: 200px;
     background: #b6b6b6;
+    margin-left: 200px;
 }
 
 .currProjTwo{
